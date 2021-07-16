@@ -1,10 +1,15 @@
 body {
     background-color: rgb(169, 199, 212);
-    background:linear-gradient(0deg, rgba(195, 255, 0, 0.151), rgba(0, 68, 22, 0.213)), url("../src/assets/img/back.jpg");
+    background:linear-gradient(0deg, rgba(195, 255, 0, 0), rgb(68, 0, 54)), url("../src/assets/img/back.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     color: white;
 }
 
 .bgc {
-    background-color: rgba(98, 43, 92, 0.282);
+    background-color: rgba(144, 73, 136, 0.448);
+}
+
+.card {
+    background-color: rgba(245, 245, 245, 0.51);
 }

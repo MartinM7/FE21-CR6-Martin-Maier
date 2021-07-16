@@ -1,1 +1,38 @@
-<p>travel-details works!</p>
+<div class="py-5 card text-center">    
+    <div class="card-body text-white">
+      <h5 class="card-title">{{place.name}}</h5>
+      <p class="card-text">{{ place.destination }}</p>
+      <p class="card-text">{{ place.description }}</p>
+      <p class="card-text">Start Date: {{ place.startDate }}</p>
+      <p class="card-text">Duration: {{ place.duration }}</p>
+      <p class="card-text">{{ place.price }} EUR</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div>
+</div>
+<div id="carouselExampleIndicators" class="py-5 carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{place.img}}" class="d-block w-100" style="max-height: 700px; max-width: auto;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{place.img2}}" class="d-block w-100" style="max-height: 700px; max-width: auto;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{place.img3}}" class="d-block w-100" style="max-height: 700px; max-width: auto;" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<app-footer></app-footer>
