@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(169, 199, 212);
+    background:linear-gradient(0deg, rgba(195, 255, 0, 0.151), rgba(0, 68, 22, 0.213)), url("../src/assets/img/back.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.bgc {
+    background-color: rgba(98, 43, 92, 0.282);
+}
