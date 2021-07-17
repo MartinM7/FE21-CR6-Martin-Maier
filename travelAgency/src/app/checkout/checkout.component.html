@@ -35,16 +35,16 @@
           </div>
           <span class="text-muted">$5</span>
         </li> -->
-        <li class="list-group-item d-flex justify-content-between bg-light">
+        <li *ngIf="discountPercentage" class="list-group-item d-flex justify-content-between bg-light">
           <div class="text-success">
-            <h6 class="my-0">Promo code</h6>
-            <small>EXAMPLECODE</small>
+            <h6 class="my-0">Discount: </h6>
+            <small>{{ discountPercentage }}%</small>
           </div>
-          <span class="text-success">−$5</span>
+          <span class="text-success">−{{ discount.toFixed(2) }} €</span>
         </li>
         <li class="list-group-item d-flex justify-content-between">
           <span>Total (EUR)</span>
-          <strong>{{cartTotal()}} €</strong>
+          <strong>{{ total }} €</strong>
         </li>
       </ul>
 

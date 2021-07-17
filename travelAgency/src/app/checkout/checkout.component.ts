@@ -8,18 +8,21 @@ import { CartService } from '../cart.service';
 })
 export class CheckoutComponent implements OnInit {
   cart: any;
+  discountPercentage: any;
+  discount: any;
+  total: any;
   constructor(private CS: CartService) { }
 
   clearCart() {
     this.CS.clearCart();
   }
 
-  cartTotal() {
-    return this.CS.cartTotal();
-  }
-
   ngOnInit(): void {
     this.cart = this.CS.getItems();
+    this.total = this.CS.cartTotal();
+    this.discountPercentage = this.CS.getDiscountPercentage();
+    this.discount = this.CS.getDiscount();
   }
 
+  
 }

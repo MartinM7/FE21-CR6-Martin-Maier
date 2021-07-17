@@ -4,7 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  items : any = [];
+  items: any = [];
+  total: number = 0;
+  discountPercentage: number = 0;
+  discount: number = 0;
+
   constructor() { }
 
   addToCart(place: any) {
@@ -25,16 +29,29 @@ export class CartService {
     for (const val of this.items) {
       total += val.price
     }
+    this.total = total;
+    this.cartDiscountPercentage();
 
-    return total;
+    this.discount = (this.discountPercentage / 100) * this.total;
+    let sum = this.total - this.discount;
+    return sum.toFixed(2);
   }
 
+  cartDiscountPercentage() {
+    if (this.total > 500 ) {
+      this.discountPercentage = 20;
+    } else if (this.total > 200) {
+      this.discountPercentage = 10;
+    } else {
+      this.discountPercentage = 0;
+    }
+  }
 
-//   function Total() {
-//     let total = 0;
-//     for (let val of cart) {
-//         total = total + (val.price * val.qtty);
-//     }
-//     document.getElementById("price").innerHTML = total.toFixed(2) + " €";
-// }
+  getDiscountPercentage() {
+    return this.discountPercentage;
+  }
+
+  getDiscount() {
+    return this.discount;
+  }
 }

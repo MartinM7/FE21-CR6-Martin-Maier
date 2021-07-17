@@ -27,7 +27,7 @@ export const places = [
   {
     name: 'Albatros Palace Resort',
     destination: 'EgyptSinaiRas Nasrani',
-    price: 896,
+    price: 200,
     description: 'Sharm El Sheikh The resort with its own beach is located in the holiday resort of Sharm El Sheikh. Ras Nasrani Beach is around 300 m away. It is approx. 2 km to the shopping center. Naama Bay, popular with tourists, with restaurants and cafes is about 10 km away.',
     img: 'assets/img/3.jpg',
     img2: 'assets/img/31.jpg',
@@ -39,7 +39,7 @@ export const places = [
   {
     name: 'Aquila Atlantis',
     destination: 'Heraklion, Crete, Greece',
-    price: 428,
+    price: 100,
     description: 'The Hotel Aquila Atlantis is a 5-star hotel (operator category) in Heraklion, Crete. Based on 43 hotel reviews, Aquila Atlantis was given a 5.4 out of 6.0 and a recommendation rate of 91%. Discover the Hotel Aquila Atlantis at TUI.at.',
     img: 'assets/img/4.jpg',
     img2: 'assets/img/41.jpg',
