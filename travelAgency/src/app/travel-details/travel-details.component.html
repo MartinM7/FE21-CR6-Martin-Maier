@@ -6,7 +6,7 @@
       <p class="card-text">Start Date: {{ place.startDate }}</p>
       <p class="card-text">Duration: {{ place.duration }}</p>
       <p class="card-text">{{ place.price }} EUR</p>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
+      <a (click)="addToCart(place)" class="btn btn-primary">Add to Cart</a>
     </div>
 </div>
 <div id="carouselExampleIndicators" class="py-5 carousel slide" data-bs-ride="carousel">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { places } from '../places';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-travel-details',
@@ -9,9 +10,20 @@ import { places } from '../places';
 })
 export class TravelDetailsComponent implements OnInit {
   place: any;
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private CS: CartService) {
 
-   }
+  }
+
+  addToCart(place: any) {
+    let items = this.CS.getItems();
+    if (items.find((val: any)=> val.name == place.name)) {
+      alert('Item is already in your cart!');
+    } else {
+      alert('Added to your Cart');
+      this.CS.addToCart(place);
+      console.log(this.CS.getItems());
+    }
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(param => {
